@@ -2,24 +2,15 @@ global infinity
 infinity = float('inf')
 
 class Node():
-    def __init__(self, node) -> None:
+    def __init__(self, node: str) -> None:
         self.node = node
         self.visited = False
         self.distance = infinity
         self.previous = None
         self.children = []
-        
-    def getAll(self):
-        return f"""{self.node}: 
-    visited: {self.visited}
-    distance: {self.distance}
-    previous: {self.previous}
-    children: {self.children}
-    
-    """
     
 class Child():
-    def __init__(self, data, weight) -> None:
+    def __init__(self, data: str, weight: int) -> None:
         self.node = data
         self.weight = weight
 
